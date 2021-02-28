@@ -357,6 +357,24 @@
         "name": "playerGrey_fall.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "playerGrey_switch1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "playerGrey_switch1.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "playerGrey_switch2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "playerGrey_switch2.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -373,11 +391,11 @@
       "oglFOV": 90,
       "oglZFar": 500,
       "oglZNear": 1,
-      "r": 220,
+      "r": 164,
       "standardSortMethod": true,
       "stopSoundsOnStartup": true,
       "title": "",
-      "v": 241,
+      "v": 239,
       "uiSettings": {
         "grid": true,
         "gridB": 255,
@@ -389,7 +407,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.898
+        "zoomFactor": 0.97
       },
       "objectsGroups": [],
       "variables": [],
@@ -403,7 +421,7 @@
           "name": "Player",
           "persistentUuid": "4dd56155-9c62-42a4-91a0-4f38497f9068",
           "width": 0,
-          "x": 64,
+          "x": 32,
           "y": 448,
           "zOrder": 1,
           "numberProperties": [],
@@ -541,7 +559,7 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 320,
+          "height": 160,
           "layer": "",
           "locked": false,
           "name": "floorgreen",
@@ -557,7 +575,7 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 256,
+          "height": 32,
           "layer": "",
           "locked": false,
           "name": "floorgreen",
@@ -573,7 +591,7 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 544,
+          "height": 352,
           "layer": "",
           "locked": false,
           "name": "floorgreen",
@@ -628,24 +646,8 @@
           "persistentUuid": "320c2d17-3ce4-4d92-a1a3-0dd48a3da93a",
           "width": 64,
           "x": 192,
-          "y": 256,
+          "y": 224,
           "zOrder": 38,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "floorcenter",
-          "persistentUuid": "f1175637-43dd-47c7-896c-523561649061",
-          "width": 0,
-          "x": 192,
-          "y": 192,
-          "zOrder": 39,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -717,62 +719,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 320,
-          "layer": "",
-          "locked": false,
-          "name": "floorgreen",
-          "persistentUuid": "11710e52-09bc-4234-b6bd-37defaff98a0",
-          "width": 128,
-          "x": 256,
-          "y": 576,
-          "zOrder": 108,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "floorleft",
-          "persistentUuid": "f6a9b7ca-0a03-4c8a-a52f-43a8c9189624",
-          "width": 0,
-          "x": 704,
-          "y": 192,
-          "zOrder": 25,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "floorright",
-          "persistentUuid": "994902a3-3c24-497b-abba-d3709763ff1c",
-          "width": 0,
-          "x": 768,
-          "y": 192,
-          "zOrder": 26,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 192,
+          "height": 352,
           "layer": "",
           "locked": false,
           "name": "floorgreen",
           "persistentUuid": "df258b5f-397e-4827-b402-f842e68dd0a1",
           "width": 128,
           "x": 704,
-          "y": 256,
+          "y": 96,
           "zOrder": 0,
           "numberProperties": [],
           "stringProperties": [],
@@ -795,17 +749,49 @@
           "initialVariables": []
         },
         {
+          "angle": 0,
+          "customSize": true,
+          "height": 96,
+          "layer": "",
+          "locked": false,
+          "name": "floorgreen",
+          "persistentUuid": "fb6b07e1-4192-457c-95f2-031178c70ec8",
+          "width": 1280,
+          "x": 0,
+          "y": 0,
+          "zOrder": 109,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
           "angle": 180,
           "customSize": false,
           "height": 0,
           "layer": "",
           "locked": false,
           "name": "floorright",
-          "persistentUuid": "397333f2-0338-4f65-8edd-85a9ee12966f",
+          "persistentUuid": "addeffc8-484e-4df5-9967-7fc55a64785f",
           "width": 0,
           "x": 704,
           "y": 448,
-          "zOrder": 25,
+          "zOrder": 110,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "floorright",
+          "persistentUuid": "b5ee7adc-5ce4-4848-9a31-a10bc7223e21",
+          "width": 0,
+          "x": 192,
+          "y": 160,
+          "zOrder": 111,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -817,11 +803,139 @@
           "layer": "",
           "locked": false,
           "name": "floor",
-          "persistentUuid": "7c14877f-87ff-49a0-9b3a-01f70208a80a",
+          "persistentUuid": "2099f869-7297-41be-8637-59b1bbb7c80c",
           "width": 0,
-          "x": 448,
-          "y": 64,
-          "zOrder": 109,
+          "x": 128,
+          "y": 160,
+          "zOrder": 112,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "floor",
+          "persistentUuid": "751f2399-dacf-4eff-bfe6-79c0ce5190e4",
+          "width": 0,
+          "x": 64,
+          "y": 160,
+          "zOrder": 113,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "floor",
+          "persistentUuid": "9b50f8dd-1d1e-4513-bcfc-b24daa7b2a01",
+          "width": 0,
+          "x": 0,
+          "y": 160,
+          "zOrder": 114,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "floor",
+          "persistentUuid": "1cb4771d-ec88-445b-8f79-d41a0fe24cab",
+          "width": 0,
+          "x": 1216,
+          "y": 160,
+          "zOrder": 115,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "floorleft",
+          "persistentUuid": "80975d69-4923-4676-8a69-b5873c0abb6b",
+          "width": 0,
+          "x": 1152,
+          "y": 160,
+          "zOrder": 116,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 512,
+          "layer": "",
+          "locked": false,
+          "name": "floorgreen",
+          "persistentUuid": "20c11e1f-5376-4135-8d78-8b4520acaf11",
+          "width": 128,
+          "x": 1152,
+          "y": 224,
+          "zOrder": 117,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "floorleft",
+          "persistentUuid": "788203c0-57c9-4644-906b-01b064ff7418",
+          "width": 0,
+          "x": 1088,
+          "y": 608,
+          "zOrder": 118,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "floorright",
+          "persistentUuid": "4aaa61a4-34c0-4dbc-adbe-007704eec3e1",
+          "width": 0,
+          "x": 1152,
+          "y": 608,
+          "zOrder": 119,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "locked": false,
+          "name": "floorgreen",
+          "persistentUuid": "953f6694-f8b0-407b-9939-3ca27af8bede",
+          "width": 128,
+          "x": 1088,
+          "y": 672,
+          "zOrder": 120,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -836,6 +950,14 @@
           "variables": [
             {
               "name": "WallJumpDirection",
+              "value": "0"
+            },
+            {
+              "name": "DashCount",
+              "value": "1"
+            },
+            {
+              "name": "DashTime",
               "value": "0"
             }
           ],
@@ -1121,6 +1243,52 @@
                           "y": 23
                         }
                       ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "grab",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "playerGrey_switch1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "playerGrey_switch2.png",
+                      "points": [],
                       "originPoint": {
                         "name": "origine",
                         "x": 0,
@@ -1675,7 +1843,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "Jump opposite direction to wall",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -1898,7 +2066,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "Wall mechanics",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -1917,6 +2085,32 @@
               },
               "comment": "Restore falling speed",
               "comment2": ""
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "disabled": false,
+              "folded": false,
+              "name": "",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "disabled": false,
+              "folded": false,
+              "name": "",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [],
+              "parameters": []
             },
             {
               "disabled": false,
@@ -2098,6 +2292,18 @@
                     "0"
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeAnimation"
+                  },
+                  "parameters": [
+                    "Player",
+                    "=",
+                    "4"
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": [
@@ -2187,6 +2393,234 @@
                         }
                       ],
                       "events": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "disabled": false,
+          "folded": false,
+          "name": "Dash",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlatformBehavior::IsOnFloor"
+                  },
+                  "parameters": [
+                    "Player",
+                    "PlatformerObject"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "Player",
+                    "DashCount",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "PlatformBehavior::IsOnFloor"
+                  },
+                  "parameters": [
+                    "Player",
+                    "PlatformerObject"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "KeyPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "LShift"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BuiltinCommonInstructions::And"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "Player",
+                            "DashCount",
+                            ">",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "Right"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "UnPauseObjectTimer"
+                          },
+                          "parameters": [
+                            "Player",
+                            "\"DashTime\""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "AddForceXY"
+                          },
+                          "parameters": [
+                            "Player",
+                            "12500",
+                            "0",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "Player",
+                            "DashCount",
+                            "-",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": [
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ObjectTimer"
+                              },
+                              "parameters": [
+                                "Player",
+                                "\"DashTime\"",
+                                "0.5"
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "PauseObjectTimer"
+                              },
+                              "parameters": [
+                                "Player",
+                                "\"DashTime\""
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ResetObjectTimer"
+                              },
+                              "parameters": [
+                                "Player",
+                                "\"DashTime\""
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "AddForceXY"
+                              },
+                              "parameters": [
+                                "Player",
+                                "0",
+                                "0",
+                                "1"
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "events": []
+                        }
+                      ]
                     }
                   ]
                 }
