@@ -2173,10 +2173,10 @@
           "variables": [],
           "behaviors": [
             {
-              "canBeGrabbed": true,
               "name": "Platform",
-              "platformType": "Jumpthru",
               "type": "PlatformBehavior::PlatformBehavior",
+              "canBeGrabbed": true,
+              "platformType": "Jumpthru",
               "yGrabOffset": 0
             }
           ],
@@ -2220,10 +2220,10 @@
           "variables": [],
           "behaviors": [
             {
-              "canBeGrabbed": true,
               "name": "Platform",
-              "platformType": "Jumpthru",
               "type": "PlatformBehavior::PlatformBehavior",
+              "canBeGrabbed": true,
+              "platformType": "Jumpthru",
               "yGrabOffset": 0
             }
           ],
@@ -2267,10 +2267,10 @@
           "variables": [],
           "behaviors": [
             {
-              "canBeGrabbed": true,
               "name": "Platform",
-              "platformType": "Jumpthru",
               "type": "PlatformBehavior::PlatformBehavior",
+              "canBeGrabbed": true,
+              "platformType": "Jumpthru",
               "yGrabOffset": 0
             }
           ],
@@ -2458,10 +2458,10 @@
           "variables": [],
           "behaviors": [
             {
-              "canBeGrabbed": true,
               "name": "Platform",
-              "platformType": "NormalPlatform",
               "type": "PlatformBehavior::PlatformBehavior",
+              "canBeGrabbed": true,
+              "platformType": "NormalPlatform",
               "yGrabOffset": 0
             }
           ],
@@ -2507,7 +2507,7 @@
           "underlined": false,
           "variables": [],
           "behaviors": [],
-          "string": "Arrow keys to move\nSpace to jump\n\nHold left or right against a\ngreen wall to slowly slide\ndown it, press jump to\nwall jump\n\nPress shift when in the air\nand holding left or right\nto dash in a direction",
+          "string": "Arrow keys to move\nSpace to jump\n\nHold left or right against a\ngreen wall to slowly slide\ndown it, press jump to\nwall jump\n\nPress shift when in the air\nand holding left or right\nto dash in a direction\n\nPress G to activate god mode.",
           "font": "",
           "characterSize": 20,
           "color": {
@@ -4120,7 +4120,7 @@
           "effects": []
         },
         {
-          "ambientLightColorB": 1702453580,
+          "ambientLightColorB": 1702453632,
           "ambientLightColorG": 7846192,
           "ambientLightColorR": 3,
           "followBaseLayerCamera": false,
