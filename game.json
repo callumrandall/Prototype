@@ -21,7 +21,7 @@
     "windowWidth": 1280,
     "windowHeight": 720,
     "latestCompilationDirectory": "",
-    "maxFPS": 0,
+    "maxFPS": 60,
     "minFPS": 20,
     "verticalSync": false,
     "platformSpecificAssets": {},
@@ -375,13 +375,109 @@
         "name": "playerGrey_switch2.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "tileGreen_27.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "tileGreen_27.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "tileGreen_26.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "tileGreen_26.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "tileGreen_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "tileGreen_01.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "redCrystal.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "redCrystal.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "tileGreen_02.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "tileGreen_02.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "flagRed_up.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "flagRed_up.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "tileBrown_18.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "tileBrown_18.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "impactPlate_light_004.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "impactPlate_light_004.ogg",
+        "userAdded": true
+      },
+      {
+        "file": "impactPlate_heavy_000.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "impactPlate_heavy_000.ogg",
+        "userAdded": true
+      },
+      {
+        "file": "impactPlate_medium_000.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "impactPlate_medium_000.ogg",
+        "userAdded": true
+      },
+      {
+        "file": "impactGlass_light_000.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "impactGlass_light_000.ogg",
+        "userAdded": true
       }
     ],
     "resourceFolders": []
   },
   "objects": [],
   "objectsGroups": [],
-  "variables": [],
+  "variables": [
+    {
+      "name": "WasJumping",
+      "value": "0"
+    }
+  ],
   "layouts": [
     {
       "b": 250,
@@ -407,7 +503,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.97
+        "zoomFactor": 0.826
       },
       "objectsGroups": [],
       "variables": [],
@@ -421,7 +517,7 @@
           "name": "Player",
           "persistentUuid": "4dd56155-9c62-42a4-91a0-4f38497f9068",
           "width": 0,
-          "x": 32,
+          "x": 64,
           "y": 448,
           "zOrder": 1,
           "numberProperties": [],
@@ -719,14 +815,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 352,
+          "height": 384,
           "layer": "",
           "locked": false,
           "name": "floorgreen",
           "persistentUuid": "df258b5f-397e-4827-b402-f842e68dd0a1",
           "width": 128,
           "x": 704,
-          "y": 96,
+          "y": 64,
           "zOrder": 0,
           "numberProperties": [],
           "stringProperties": [],
@@ -751,7 +847,7 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 96,
+          "height": 64,
           "layer": "",
           "locked": false,
           "name": "floorgreen",
@@ -901,7 +997,7 @@
           "name": "floorleft",
           "persistentUuid": "788203c0-57c9-4644-906b-01b064ff7418",
           "width": 0,
-          "x": 1088,
+          "x": 1056,
           "y": 608,
           "zOrder": 118,
           "numberProperties": [],
@@ -917,7 +1013,7 @@
           "name": "floorright",
           "persistentUuid": "4aaa61a4-34c0-4dbc-adbe-007704eec3e1",
           "width": 0,
-          "x": 1152,
+          "x": 1120,
           "y": 608,
           "zOrder": 119,
           "numberProperties": [],
@@ -933,9 +1029,553 @@
           "name": "floorgreen",
           "persistentUuid": "953f6694-f8b0-407b-9939-3ca27af8bede",
           "width": 128,
-          "x": 1088,
+          "x": 1056,
           "y": 672,
           "zOrder": 120,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 32,
+          "layer": "",
+          "locked": false,
+          "name": "jumpthruright",
+          "persistentUuid": "c5383127-e7f1-454a-99fd-6cc0e7cd2bd2",
+          "width": 32,
+          "x": 320,
+          "y": 192,
+          "zOrder": 123,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "collectible",
+          "persistentUuid": "08f31a3a-82a8-4205-a993-4d4f2c6b7cef",
+          "width": 0,
+          "x": 64,
+          "y": 96,
+          "zOrder": 124,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "GUI",
+          "locked": false,
+          "name": "Score",
+          "persistentUuid": "fdb28883-edf0-45d6-80fe-770da5ef04ce",
+          "width": 0,
+          "x": 32,
+          "y": 640,
+          "zOrder": 125,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 32,
+          "layer": "",
+          "locked": false,
+          "name": "jumpthru",
+          "persistentUuid": "468d7d79-1342-4308-ad6e-e0f99f446bfc",
+          "width": 32,
+          "x": 256,
+          "y": 192,
+          "zOrder": 126,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 32,
+          "layer": "",
+          "locked": false,
+          "name": "jumpthru",
+          "persistentUuid": "ff8ca0be-24c1-4bce-be09-92ba4c03c0b7",
+          "width": 32,
+          "x": 288,
+          "y": 192,
+          "zOrder": 126,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 32,
+          "layer": "",
+          "locked": false,
+          "name": "jumpthrucenter",
+          "persistentUuid": "ee3781c7-1f86-4089-b92f-3c481406e8e5",
+          "width": 32,
+          "x": 512,
+          "y": 192,
+          "zOrder": 127,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "collectible",
+          "persistentUuid": "ec3a8366-5c47-478f-a6b4-3a271ff3361a",
+          "width": 0,
+          "x": 672,
+          "y": 128,
+          "zOrder": 128,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "collectible",
+          "persistentUuid": "1fcef343-6f77-40d0-a1f4-d4ee40dd6084",
+          "width": 0,
+          "x": 640,
+          "y": 656,
+          "zOrder": 129,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 512,
+          "layer": "",
+          "locked": false,
+          "name": "floorgreen",
+          "persistentUuid": "d492e5ee-01a2-439a-9b17-5ada3ed7c872",
+          "width": 32,
+          "x": 0,
+          "y": 64,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 32,
+          "layer": "",
+          "locked": false,
+          "name": "jumpthru",
+          "persistentUuid": "2e0a898b-5665-42d1-8e53-08b2347cf6e9",
+          "width": 32,
+          "x": 160,
+          "y": 384,
+          "zOrder": 126,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 32,
+          "layer": "",
+          "locked": false,
+          "name": "jumpthruleft",
+          "persistentUuid": "194d0061-d003-4add-a3d0-1183f3dd09d8",
+          "width": 32,
+          "x": 128,
+          "y": 384,
+          "zOrder": 130,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 32,
+          "layer": "",
+          "locked": false,
+          "name": "jumpthru",
+          "persistentUuid": "3949320e-4aef-4e19-ac63-5715c2c00e94",
+          "width": 32,
+          "x": 32,
+          "y": 288,
+          "zOrder": 126,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 32,
+          "layer": "",
+          "locked": false,
+          "name": "jumpthruright",
+          "persistentUuid": "9b11b5e4-716b-4085-acbb-53b34512b6b7",
+          "width": 32,
+          "x": 64,
+          "y": 288,
+          "zOrder": 131,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "collectible",
+          "persistentUuid": "4377eb23-835d-440a-a71d-328e5c2cd1b9",
+          "width": 0,
+          "x": 32,
+          "y": 224,
+          "zOrder": 132,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 32,
+          "layer": "",
+          "locked": false,
+          "name": "jumpthru",
+          "persistentUuid": "34b9b5ec-e5a1-4807-93e6-39ad70418a4e",
+          "width": 32,
+          "x": 928,
+          "y": 512,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 32,
+          "layer": "",
+          "locked": false,
+          "name": "jumpthruright",
+          "persistentUuid": "aca4dcf4-dc60-43a9-8ecf-03979594b347",
+          "width": 32,
+          "x": 960,
+          "y": 512,
+          "zOrder": 123,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 32,
+          "layer": "",
+          "locked": false,
+          "name": "jumpthruleft",
+          "persistentUuid": "9be2475e-9587-474a-b185-644d8e98d398",
+          "width": 32,
+          "x": 896,
+          "y": 512,
+          "zOrder": 130,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "collectible",
+          "persistentUuid": "0c31ece2-1a83-42b9-b2c0-5edb86581f96",
+          "width": 0,
+          "x": 832,
+          "y": 384,
+          "zOrder": 134,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 32,
+          "layer": "",
+          "locked": false,
+          "name": "jumpthru",
+          "persistentUuid": "1a1fb2f2-3e8e-4dcb-b079-3481de83f939",
+          "width": 32,
+          "x": 1120,
+          "y": 192,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 32,
+          "layer": "",
+          "locked": false,
+          "name": "jumpthruright",
+          "persistentUuid": "bbced5c1-26d2-4f71-9e6c-42f863e6de65",
+          "width": 32,
+          "x": 1056,
+          "y": 384,
+          "zOrder": 123,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 32,
+          "layer": "",
+          "locked": false,
+          "name": "jumpthruleft",
+          "persistentUuid": "aa1a4e19-7735-4ba4-beb4-faa5c117530a",
+          "width": 32,
+          "x": 992,
+          "y": 384,
+          "zOrder": 130,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 32,
+          "layer": "",
+          "locked": false,
+          "name": "jumpthru",
+          "persistentUuid": "efb0d0fb-a47a-4ab1-b668-e78c4963a309",
+          "width": 32,
+          "x": 928,
+          "y": 256,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 32,
+          "layer": "",
+          "locked": false,
+          "name": "jumpthruright",
+          "persistentUuid": "f22e1dc0-8fe0-4379-8144-107ca8fdee67",
+          "width": 32,
+          "x": 960,
+          "y": 256,
+          "zOrder": 123,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 32,
+          "layer": "",
+          "locked": false,
+          "name": "jumpthruleft",
+          "persistentUuid": "3ccf0f61-bced-4410-b35f-c64df3c1ce00",
+          "width": 32,
+          "x": 896,
+          "y": 256,
+          "zOrder": 130,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 32,
+          "layer": "",
+          "locked": false,
+          "name": "jumpthru",
+          "persistentUuid": "2d4a975b-3b83-44ef-b946-f1ad559cc80c",
+          "width": 32,
+          "x": 1024,
+          "y": 384,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 32,
+          "layer": "",
+          "locked": false,
+          "name": "jumpthruleft",
+          "persistentUuid": "6a618990-f27d-4107-8dbb-0146503afa4c",
+          "width": 32,
+          "x": 1088,
+          "y": 192,
+          "zOrder": 130,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "collectible",
+          "persistentUuid": "43d0a63d-7098-419f-a212-1316eebc6976",
+          "width": 0,
+          "x": 896,
+          "y": 64,
+          "zOrder": 135,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 96,
+          "layer": "",
+          "locked": false,
+          "name": "floorgreen",
+          "persistentUuid": "85a791d0-8abd-445e-aeec-33d6602f55f4",
+          "width": 32,
+          "x": 1248,
+          "y": 64,
+          "zOrder": 136,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "end",
+          "persistentUuid": "4009960c-4fbd-4ea4-9a14-d9b004dd615d",
+          "width": 0,
+          "x": 1184,
+          "y": 96,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "locked": false,
+          "name": "deathzone",
+          "persistentUuid": "ead9c243-7938-4cb1-8c2c-73e2304f0c36",
+          "width": 1280,
+          "x": 0,
+          "y": 736,
+          "zOrder": 138,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 800,
+          "layer": "",
+          "locked": false,
+          "name": "deathzone",
+          "persistentUuid": "4ee38251-5b32-45e6-be93-d1299c4e6e41",
+          "width": 64,
+          "x": -64,
+          "y": 0,
+          "zOrder": 139,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "locked": false,
+          "name": "deathzone",
+          "persistentUuid": "1fffa0e9-4b69-434d-baea-eac8157a1eab",
+          "width": 1344,
+          "x": -64,
+          "y": -64,
+          "zOrder": 140,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 864,
+          "layer": "",
+          "locked": false,
+          "name": "deathzone",
+          "persistentUuid": "823700d2-7844-46be-86ac-1505e69c1979",
+          "width": 64,
+          "x": 1280,
+          "y": -64,
+          "zOrder": 141,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 256,
+          "layer": "",
+          "locked": false,
+          "name": "Instructions",
+          "persistentUuid": "9df0f028-94d5-4927-affc-c1d68f2c86af",
+          "width": 256,
+          "x": 352,
+          "y": 352,
+          "zOrder": 142,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -957,12 +1597,14 @@
               "value": "1"
             },
             {
-              "name": "DashTime",
+              "name": "Score",
               "value": "0"
             }
           ],
           "behaviors": [
             {
+              "name": "PlatformerObject",
+              "type": "PlatformBehavior::PlatformerObjectBehavior",
               "acceleration": 2000,
               "canGrabPlatforms": false,
               "deceleration": 2000,
@@ -973,10 +1615,8 @@
               "ladderClimbingSpeed": 150,
               "maxFallingSpeed": 1000,
               "maxSpeed": 250,
-              "name": "PlatformerObject",
               "roundCoordinates": true,
               "slopeMaxAngle": 60,
-              "type": "PlatformBehavior::PlatformerObjectBehavior",
               "xGrabTolerance": 10,
               "yGrabOffset": 0
             }
@@ -1265,29 +1905,12 @@
               "useMultipleDirections": false,
               "directions": [
                 {
-                  "looping": true,
+                  "looping": false,
                   "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
                       "image": "playerGrey_switch1.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "playerGrey_switch2.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -1316,10 +1939,10 @@
           "variables": [],
           "behaviors": [
             {
-              "canBeGrabbed": true,
               "name": "Platform",
-              "platformType": "NormalPlatform",
               "type": "PlatformBehavior::PlatformBehavior",
+              "canBeGrabbed": true,
+              "platformType": "NormalPlatform",
               "yGrabOffset": 0
             }
           ],
@@ -1410,10 +2033,10 @@
           "variables": [],
           "behaviors": [
             {
-              "canBeGrabbed": true,
               "name": "Platform",
-              "platformType": "NormalPlatform",
               "type": "PlatformBehavior::PlatformBehavior",
+              "canBeGrabbed": true,
+              "platformType": "NormalPlatform",
               "yGrabOffset": 0
             }
           ],
@@ -1506,13 +2129,356 @@
           "variables": [],
           "behaviors": [
             {
-              "canBeGrabbed": true,
               "name": "Platform",
-              "platformType": "NormalPlatform",
               "type": "PlatformBehavior::PlatformBehavior",
+              "canBeGrabbed": true,
+              "platformType": "NormalPlatform",
               "yGrabOffset": 0
             }
           ]
+        },
+        {
+          "name": "jumpthru",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [
+            {
+              "canBeGrabbed": true,
+              "name": "Platform",
+              "platformType": "Jumpthru",
+              "type": "PlatformBehavior::PlatformBehavior",
+              "yGrabOffset": 0
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "tileGreen_27.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "jumpthruleft",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [
+            {
+              "canBeGrabbed": true,
+              "name": "Platform",
+              "platformType": "Jumpthru",
+              "type": "PlatformBehavior::PlatformBehavior",
+              "yGrabOffset": 0
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "tileGreen_26.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "jumpthruright",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [
+            {
+              "canBeGrabbed": true,
+              "name": "Platform",
+              "platformType": "Jumpthru",
+              "type": "PlatformBehavior::PlatformBehavior",
+              "yGrabOffset": 0
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "tileGreen_01.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "jumpthrucenter",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [
+            {
+              "name": "Platform",
+              "type": "PlatformBehavior::PlatformBehavior",
+              "canBeGrabbed": true,
+              "platformType": "Jumpthru",
+              "yGrabOffset": 0
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "tileGreen_02.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "collectible",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "redCrystal.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "Score",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "Text",
+          "font": "",
+          "characterSize": 50,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
+        },
+        {
+          "name": "end",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "flagRed_up.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "deathzone",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "tileBrown_18.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "Instructions",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "Arrow keys to move\nSpace to jump\n\nHold left or right against a\ngreen wall to slowly slide\ndown it, press jump to\nwall jump\n\nPress shift when in the air\nand holding left or right\nto dash in a direction",
+          "font": "",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
         }
       ],
       "events": [
@@ -1833,6 +2799,98 @@
                 }
               ],
               "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlatformBehavior::IsJumping"
+                  },
+                  "parameters": [
+                    "Player",
+                    "PlatformerObject"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarGlobal"
+                  },
+                  "parameters": [
+                    "WasJumping",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "impactPlate_light_004.ogg",
+                    "no",
+                    "10",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarGlobal"
+                  },
+                  "parameters": [
+                    "WasJumping",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "PlatformBehavior::IsJumping"
+                  },
+                  "parameters": [
+                    "Player",
+                    "PlatformerObject"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarGlobal"
+                  },
+                  "parameters": [
+                    "WasJumping",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
             }
           ],
           "parameters": []
@@ -1843,7 +2901,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Jump opposite direction to wall",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -2066,7 +3124,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Wall mechanics",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -2085,32 +3143,6 @@
               },
               "comment": "Restore falling speed",
               "comment2": ""
-            },
-            {
-              "colorB": 228,
-              "colorG": 176,
-              "colorR": 74,
-              "creationTime": 0,
-              "disabled": false,
-              "folded": false,
-              "name": "",
-              "source": "",
-              "type": "BuiltinCommonInstructions::Group",
-              "events": [],
-              "parameters": []
-            },
-            {
-              "colorB": 228,
-              "colorG": 176,
-              "colorR": 74,
-              "creationTime": 0,
-              "disabled": false,
-              "folded": false,
-              "name": "",
-              "source": "",
-              "type": "BuiltinCommonInstructions::Group",
-              "events": [],
-              "parameters": []
             },
             {
               "disabled": false,
@@ -2484,24 +3516,15 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "BuiltinCommonInstructions::And"
+                        "value": "VarObjet"
                       },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "VarObjet"
-                          },
-                          "parameters": [
-                            "Player",
-                            "DashCount",
-                            ">",
-                            "0"
-                          ],
-                          "subInstructions": []
-                        }
-                      ]
+                      "parameters": [
+                        "Player",
+                        "DashCount",
+                        ">",
+                        "0"
+                      ],
+                      "subInstructions": []
                     }
                   ],
                   "actions": [],
@@ -2527,24 +3550,27 @@
                         {
                           "type": {
                             "inverted": false,
-                            "value": "UnPauseObjectTimer"
+                            "value": "AddForceAL"
                           },
                           "parameters": [
                             "Player",
-                            "\"DashTime\""
+                            "0",
+                            "3000",
+                            ""
                           ],
                           "subInstructions": []
                         },
                         {
                           "type": {
                             "inverted": false,
-                            "value": "AddForceXY"
+                            "value": "PlaySound"
                           },
                           "parameters": [
-                            "Player",
-                            "12500",
-                            "0",
-                            "1"
+                            "",
+                            "impactPlate_heavy_000.ogg",
+                            "",
+                            "10",
+                            ""
                           ],
                           "subInstructions": []
                         },
@@ -2562,69 +3588,241 @@
                           "subInstructions": []
                         }
                       ],
-                      "events": [
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
                         {
-                          "disabled": false,
-                          "folded": false,
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "ObjectTimer"
-                              },
-                              "parameters": [
-                                "Player",
-                                "\"DashTime\"",
-                                "0.5"
-                              ],
-                              "subInstructions": []
-                            }
+                          "type": {
+                            "inverted": false,
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "Left"
                           ],
-                          "actions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "PauseObjectTimer"
-                              },
-                              "parameters": [
-                                "Player",
-                                "\"DashTime\""
-                              ],
-                              "subInstructions": []
-                            },
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "ResetObjectTimer"
-                              },
-                              "parameters": [
-                                "Player",
-                                "\"DashTime\""
-                              ],
-                              "subInstructions": []
-                            },
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "AddForceXY"
-                              },
-                              "parameters": [
-                                "Player",
-                                "0",
-                                "0",
-                                "1"
-                              ],
-                              "subInstructions": []
-                            }
-                          ],
-                          "events": []
+                          "subInstructions": []
                         }
-                      ]
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "AddForceAL"
+                          },
+                          "parameters": [
+                            "Player",
+                            "180",
+                            "3000",
+                            ""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "impactPlate_heavy_000.ogg",
+                            "",
+                            "10",
+                            ""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "Player",
+                            "DashCount",
+                            "-",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
                     }
                   ]
                 }
               ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "disabled": false,
+          "folded": false,
+          "name": "Score",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Player",
+                    "collectible",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Score",
+                    "+",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "impactGlass_light_000.ogg",
+                    "",
+                    "10",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "collectible",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "Score",
+                    "=",
+                    "\"Score: \" + Player.VariableString(Score)"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "disabled": false,
+          "folded": false,
+          "name": "Death",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::Or"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "Player",
+                        "end",
+                        "",
+                        "",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "Player",
+                        "deathzone",
+                        "",
+                        "",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PushScene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Start\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
             }
           ],
           "parameters": []
@@ -2651,6 +3849,17 @@
               "width": 0
             }
           ],
+          "effects": []
+        },
+        {
+          "ambientLightColorB": 1702453580,
+          "ambientLightColorG": 7846192,
+          "ambientLightColorR": 3,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "GUI",
+          "visibility": true,
+          "cameras": [],
           "effects": []
         }
       ],
