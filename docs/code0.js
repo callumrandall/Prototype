@@ -1046,7 +1046,7 @@ gdjs.StartCode.condition0IsTrue_0.val = gdjs.evtTools.input.isKeyPressed(runtime
 }if ( gdjs.StartCode.condition0IsTrue_0.val ) {
 {
 {gdjs.StartCode.conditionTrue_1 = gdjs.StartCode.condition1IsTrue_0;
-gdjs.StartCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(7116204);
+gdjs.StartCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(8083396);
 }
 }}
 if (gdjs.StartCode.condition1IsTrue_0.val) {
